@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+# import models
+from .models import Cat
+
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
@@ -10,6 +13,12 @@ def about(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+
+# CATS
+def cats_index(request):
+    cats = Cat.objects.all()
+    return render(request, 'cats/index.html', { 'cats': cats })
 
 
 # Instrcutions
