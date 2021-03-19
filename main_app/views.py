@@ -3,19 +3,25 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse('<h1>Cat Collector</h1>')
+    return render(request, 'index.html')
 
 def about(request):
-    lorem_ipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a lorem non elit interdum congue ut vitae nibh. Nam maximus laoreet dui, hendrerit auctor ex convallis faucibus. Morbi posuere id nulla vitae facilisis. Morbi fermentum libero in varius malesuada. Cras condimentum lobortis neque, eu auctor dolor interdum quis. Nulla nec facilisis ante, vel efficitur nibh. Quisque venenatis augue condimentum nisi mollis rhoncus sit amet et leo.Sed eget ornare neque. Morbi pulvinar ante vitae tellus hendrerit mollis. Nullam ut gravida nulla. Donec sed dolor ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque varius risus et dui lacinia, aliquet finibus est eleifend. Ut consequat dictum lacus in elementum. Nullam pretium varius maximus. Aliquam finibus aliquet diam, quis maximus diam sollicitudin vitae. Suspendisse sed suscipit est."
-    return HttpResponse(lorem_ipsum)
+    return render(request, 'about.html')
 
 def contact(request):
     return render(request, 'contact.html')
 
 
+# Instrcutions
+# 1. Update index view function to look similar to the contact view function
+# 2. Add a index.html page with the current HTML that is displayed
+# 3. Update about view function to look similar to the contact view function
+# 4. Add a about.html page with the current HTML that is displayed
+# 5. Update your urls.py file (main_app) to look similar to the contact path
+
 # 1. Make a view function
 # 2. Make the html page
-# 2. Add the view to the urls.py inside of main_app.urls
+# 3. Add the view to the urls.py inside of main_app.urls
 
 # In browser
 # When I go to localhost:8000/contact
